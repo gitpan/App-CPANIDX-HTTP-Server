@@ -7,14 +7,14 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.31
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.102342, CPAN::Meta::Converter version 2.102400'
+generated_by: 'Dist::Zilla version 4.200000, CPAN::Meta::Converter version 2.102400'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: App-CPANIDX-HTTP-Server
 requires:
-  App::CPANIDX: 0.24
+  App::CPANIDX: 0.28
   Config::Tiny: 2.12
   HTTP::Server::Simple: 0.43
   HTTP::Server::Simple::CGI: 0
@@ -22,4 +22,4 @@ requires:
 resources:
   homepage: http://github.com/bingos/app-cpanidx-http-server/tree
   repository: git://github.com/bingos/app-cpanidx-http-server.git
-version: 0.02
+version: 0.04

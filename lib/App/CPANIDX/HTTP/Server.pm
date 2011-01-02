@@ -1,6 +1,6 @@
 package App::CPANIDX::HTTP::Server;
 BEGIN {
-  $App::CPANIDX::HTTP::Server::VERSION = '0.02';
+  $App::CPANIDX::HTTP::Server::VERSION = '0.04';
 }
  
 #ABSTRACT: HTTP::Server::Simple based server for CPANIDX
@@ -59,7 +59,7 @@ sub _search_db {
   my ($self,$type,$search) = @_;
   my @results;
   if ( my $sql = App::CPANIDX::Queries->query( $type ) ) {
-    if ( ( $type eq 'mod' or $type eq 'corelist' ) 
+    if ( ( $type eq 'mod' or $type eq 'corelist' or $type eq 'perms' ) 
         and !( $search =~ m#\A[a-zA-Z_][0-9a-zA-Z_]*(?:(::|')[0-9a-zA-Z_]+)*\z# ) ) {
       return @results;
     } 
@@ -85,7 +85,7 @@ App::CPANIDX::HTTP::Server - HTTP::Server::Simple based server for CPANIDX
 
 =head1 VERSION
 
-version 0.02
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -145,7 +145,7 @@ Chris Williams <chris@bingosnet.co.uk>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Chris Williams.
+This software is copyright (c) 2011 by Chris Williams.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

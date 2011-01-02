@@ -4,7 +4,7 @@
       "Chris Williams <chris@bingosnet.co.uk>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.102342, CPAN::Meta::Converter version 2.102400",
+   "generated_by" : "Dist::Zilla version 4.200000, CPAN::Meta::Converter version 2.102400",
    "license" : [
       "perl_5"
    ],
@@ -26,7 +26,7 @@
       },
       "runtime" : {
          "requires" : {
-            "App::CPANIDX" : "0.24",
+            "App::CPANIDX" : "0.28",
             "Config::Tiny" : "2.12",
             "HTTP::Server::Simple" : "0.43",
             "HTTP::Server::Simple::CGI" : 0,
@@ -43,6 +43,6 @@
          "web" : "http://github.com/bingos/app-cpanidx-http-server/tree"
       }
    },
-   "version" : "0.02"
+   "version" : "0.04"
 }
 

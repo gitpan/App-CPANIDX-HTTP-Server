@@ -24,12 +24,12 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'perl',
   'NAME' => 'App::CPANIDX::HTTP::Server',
   'PREREQ_PM' => {
-    'App::CPANIDX' => '0.24',
+    'App::CPANIDX' => '0.28',
     'Config::Tiny' => '2.12',
     'HTTP::Server::Simple' => '0.43',
     'HTTP::Server::Simple::CGI' => '0'
   },
-  'VERSION' => '0.02',
+  'VERSION' => '0.04',
   'test' => {
     'TESTS' => 't/*.t'
   }

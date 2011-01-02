@@ -1,3 +1,19 @@
-===================================
-End of changes in the last 365 days
-===================================
+==============================
+2011-01-01 22:33:53 +0000 0.04
+==============================
+
+  commit 71ece539b5b1721a05a5fd57bd1ec697e551dfdb
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Sat Jan 1 22:33:53 2011 +0000
+  
+    Should be requiring 0.28
+
+  commit ccfb621f3f5ce4baebed5d0eb07e9d834e270916
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Sat Jan 1 22:32:35 2011 +0000
+  
+    Updates for new App::CPANIDX 
+
+====================================
+End of changes in the last 1825 days
+====================================
