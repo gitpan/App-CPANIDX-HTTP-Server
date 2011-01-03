@@ -1,6 +1,6 @@
 package App::CPANIDX::HTTP::Server;
 BEGIN {
-  $App::CPANIDX::HTTP::Server::VERSION = '0.04';
+  $App::CPANIDX::HTTP::Server::VERSION = '0.06';
 }
  
 #ABSTRACT: HTTP::Server::Simple based server for CPANIDX
@@ -64,10 +64,15 @@ sub _search_db {
       return @results;
     } 
     # send query to dbi
-    my $sth = $self->{_dbh}->prepare_cached( $sql->[0] ) or die $DBI::errstr, "\n";
-    $sth->execute( ( $sql->[1] ? $search : () ) );
-    while ( my $row = $sth->fetchrow_hashref() ) {
-       push @results, { %{ $row } };
+    if ( my $sth = $self->{_dbh}->prepare_cached( $sql->[0] ) ) {
+      $sth->execute( ( $sql->[1] ? $search : () ) );
+      while ( my $row = $sth->fetchrow_hashref() ) {
+        push @results, { %{ $row } };
+      }
+    }
+    else {
+      warn $DBI::errstr, "\n";
+      return @results;
     }
   }
   return @results;
@@ -85,7 +90,7 @@ App::CPANIDX::HTTP::Server - HTTP::Server::Simple based server for CPANIDX
 
 =head1 VERSION
 
-version 0.04
+version 0.06
 
 =head1 SYNOPSIS
 

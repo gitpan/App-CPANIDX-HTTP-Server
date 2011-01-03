@@ -29,7 +29,7 @@ my %WriteMakefileArgs = (
     'HTTP::Server::Simple' => '0.43',
     'HTTP::Server::Simple::CGI' => '0'
   },
-  'VERSION' => '0.04',
+  'VERSION' => '0.06',
   'test' => {
     'TESTS' => 't/*.t'
   }
