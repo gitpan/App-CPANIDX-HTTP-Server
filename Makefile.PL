@@ -2,36 +2,36 @@
 use strict;
 use warnings;
 
-BEGIN { require 5.006; }
+use 5.006;
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'HTTP::Server::Simple based server for CPANIDX',
-  'AUTHOR' => 'Chris Williams <chris@bingosnet.co.uk>',
-  'BUILD_REQUIRES' => {
-    'Test::More' => '0.47'
+  "ABSTRACT" => "HTTP::Server::Simple based server for CPANIDX",
+  "AUTHOR" => "Chris Williams <chris\@bingosnet.co.uk>",
+  "BUILD_REQUIRES" => {
+    "Test::More" => "0.47"
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'App-CPANIDX-HTTP-Server',
-  'EXE_FILES' => [
-    'bin/cpanidx_httpserver'
+  "DISTNAME" => "App-CPANIDX-HTTP-Server",
+  "EXE_FILES" => [
+    "bin/cpanidx_httpserver"
   ],
-  'LICENSE' => 'perl',
-  'NAME' => 'App::CPANIDX::HTTP::Server',
-  'PREREQ_PM' => {
-    'App::CPANIDX' => '0.28',
-    'Config::Tiny' => '2.12',
-    'HTTP::Server::Simple' => '0.43',
-    'HTTP::Server::Simple::CGI' => '0'
+  "LICENSE" => "perl",
+  "NAME" => "App::CPANIDX::HTTP::Server",
+  "PREREQ_PM" => {
+    "App::CPANIDX" => "0.28",
+    "Config::Tiny" => "2.12",
+    "HTTP::Server::Simple" => "0.43",
+    "HTTP::Server::Simple::CGI" => 0
   },
-  'VERSION' => '0.06',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.08",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

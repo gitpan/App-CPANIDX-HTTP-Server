@@ -3,7 +3,7 @@ NAME
     CPANIDX
 
 VERSION
-    version 0.06
+    version 0.08
 
 SYNOPSIS
       use strict;

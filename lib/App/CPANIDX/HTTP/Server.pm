@@ -1,6 +1,6 @@
 package App::CPANIDX::HTTP::Server;
-BEGIN {
-  $App::CPANIDX::HTTP::Server::VERSION = '0.06';
+{
+  $App::CPANIDX::HTTP::Server::VERSION = '0.08';
 }
  
 #ABSTRACT: HTTP::Server::Simple based server for CPANIDX
@@ -69,6 +69,9 @@ sub _search_db {
       while ( my $row = $sth->fetchrow_hashref() ) {
         push @results, { %{ $row } };
       }
+      if ( $type eq 'mod' ) { # sanity check
+        @results = grep { $_->{mod_name} eq $search } @results;
+      }
     }
     else {
       warn $DBI::errstr, "\n";
@@ -90,7 +93,7 @@ App::CPANIDX::HTTP::Server - HTTP::Server::Simple based server for CPANIDX
 
 =head1 VERSION
 
-version 0.06
+version 0.08
 
 =head1 SYNOPSIS
 
